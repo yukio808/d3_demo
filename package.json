@@ -1,0 +1,16 @@
+{
+  "name": "d3_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.5",
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0"
+  }
+}
