@@ -10,7 +10,35 @@
   <div id="circles"></div>
 
   <script>
+    // add dataset
+    var dataset = [];
+    var numPoints = 100;
+    var numWaves = 4;
+    var i, o, p;
 
+    for (i = 0; i < numPoints; i += 1) {
+      p = i / (numPoints - 1) * 100;
+      o = Math.PI * p * numWaves * 2;
+      dataset.push({ percent: p, offset: o });
+    }
+
+    var svg = d3.select("#circles")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%");
+
+    var circles = svg.selectAll("circle")
+      .data(dataset)
+      .enter()
+      .append("circle")
+      .attr("cx", function(d) {
+        return d.percent + "%";
+      })
+      .attr("cy", 0)
+      .attr("fill", "red")
+      .attr("r", "1%");
+
+    
   </script>
 </body>
 </html>
